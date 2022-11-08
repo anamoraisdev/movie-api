@@ -1,36 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 import './styles/globals.css'
-import Acao from './pages/acao'
-import Comedia from './pages/comedia'
-import Ciencia from './pages/ciencia'
 import Navbar from './components/navbar';
 import Menu from './components/menu';
+import Detalhes from './detalhes';
 import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Acao/>,
-  },
-  {
-    path: "/comedia",
-    element: <Comedia/>,
-  },
-  {
-    path: "/ciencia",
-    element: <Ciencia/>,
+    path: "/detalhes",
+    element: <Detalhes/>,
   },
 ]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar/>
-    <Menu/>
+    <Menu/>   
     <RouterProvider router={router} />
   </React.StrictMode>
 );

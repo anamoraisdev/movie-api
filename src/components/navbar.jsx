@@ -11,13 +11,16 @@ const Navbar = () => {
       setResultado(resposta.data.results)
     }
     return(
-     <div className="flex justify-end ">
-        <img src="" alt="logo"/>
-        <input placeholder="Titulo" className="rounded-full w-[200px]" onChange={(event) => {
+     <div className="bg-black flex ">
+        <img className="h-[60px] w-auto px-4 py-3" src="./logo.png" alt="logo"/>
+        <input placeholder="Titulo" className="rounded-md w-[500px] h-7 my-3 " onChange={(event) => {
         setTitulo(event.target.value);
         console.log(titulo)
         }} />
-        <button className= ""onClick={() => procurarFilme(titulo)}>Procurar Filme</button>
+        <div className="items-end">
+          <button className= " roundend-md bg-yellow-300 h-7 w-20 my-3 mx-1 text-black" onClick={() => procurarFilme(titulo)}>Buscar</button>
+          <button className="roundend-md bg-yellow-300 h-7 w-20 my-3 mx-1 text-black"> Login</button>
+        </div>
         {resultado && resultado.map((filme) => (
           <div className="text-center w-[200px]" key={filme.title}>
             <img className="w-full h-auto object-cover" src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} />

@@ -31,7 +31,7 @@ const Menu = () => {
             <div className="flex flex-wrap w-full justify-center gap-10">
                 {filmes && filmes.map((filme) => (
                     <div className="w-[200px] h-[400px] text-center ">
-                    <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} className="w-full h-auto object-cover"/>
+                    <a href="/detalhes"><img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} className="w-full h-auto object-cover"/></a>
                     <h1 className="text-xl">{filme.title}</h1>
                     </div>
                 ))}
