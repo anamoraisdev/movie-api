@@ -24,7 +24,7 @@ const Menu = () => {
 
     return(
         <div className="w-[11%] h-full">
-            <div className="bg-black text-yellow-100 text-md flex flex-col justify-start py-7">
+            <div className="bg-black text-yellow-100 text-md flex flex-col justify-start ">
                 <h1 className="text-start text-2xl mx-3 my-1">Generos</h1>
                 {generos && generos.map((genero)=> (
                 <button key={genero.id} className="text-start mx-3 my-1 " onClick={() => pegarFilmes(genero.id)}>{genero.name}</button>
