@@ -51,13 +51,12 @@ const Banner = () => {
     }
 
     return (
-        <div className="mx-0 my-auto w-full h-[50%] overflow-hidden">
             <div className="">
                 <img id="img-1" name="1" className="w-full h-auto" src="./img1.png" alt="image-banner-1"/>
                 <img id="img-2" name="2" className="w-full h-auto hidden" src="./img2.png" alt="image-banner-2"/>
                 <img id="img-3" name="3" className="w-full h-auto hidden" src="./img3.png" alt="image-banner-3"/>
                 
-                <div className="absolute w-screen h-[50%] mb-[4%] flex justify-center bottom-0">
+                <div className="relative w-screen flex justify-center bottom-0">
                     <input className="" type="radio" name="1" id="radio-1" onClick={(event) => {
                         ativarSlide(parseInt(event.target.name));
                         marcarInput (event.target)
@@ -72,7 +71,6 @@ const Banner = () => {
                     }} ></input>
                 </div>
             </div>
-        </div>
     );
 }
 export default Banner;
