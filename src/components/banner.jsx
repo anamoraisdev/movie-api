@@ -86,6 +86,9 @@ const Banner = () => {
                         marcarInput(event.target)
                     }} ></input>
                 </div>
+
+                <a href="/detalhes">Link</a>
+
             </div>
     );
 }
