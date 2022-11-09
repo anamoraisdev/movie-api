@@ -49,6 +49,22 @@ const Banner = () => {
         }
 
     }
+    const slideAutomatico = () => {
+        let count = 1;
+        document.getElementById("img-1").checked = true;
+
+        setInterval(() => {
+            nextImage();
+        }, 2000);
+
+        function nextImage(){
+            count ++;
+            if (count>3){
+                count = 1;
+            }
+            document.getElementById("img-1" + count).checked = true
+        }
+    }
 
     return (
             <div className="">
